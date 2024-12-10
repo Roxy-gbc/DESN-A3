@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 
 const AddTaskPage = ({ addTaskSubmit }) => {
@@ -184,6 +185,10 @@ const AddTaskPage = ({ addTaskSubmit }) => {
       </div>
     </section>
   );
+};
+
+AddTaskPage.propTypes = {
+  addTaskSubmit: PropTypes.func.isRequired,
 };
 
 export default AddTaskPage;

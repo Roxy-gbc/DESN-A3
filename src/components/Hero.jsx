@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import bannerImage from '../assets/images/banner.png';
 
 const Hero = ({
@@ -24,6 +25,11 @@ const Hero = ({
       </div>
     </section>
   );
+};
+
+Hero.propTypes = {
+  title: PropTypes.string,      // Ensures title is a string
+  subtitle: PropTypes.string,   // Ensures subtitle is a string
 };
 
 export default Hero;

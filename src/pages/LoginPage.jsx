@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import bannerImage from '../assets/images/banner.png';
 
 const LoginPage = ({ onLoginSuccess }) => {
@@ -10,6 +12,7 @@ const LoginPage = ({ onLoginSuccess }) => {
     e.preventDefault();
     if (enteredCode.length === 6) {
       onLoginSuccess();
+      toast.success('Login Successful!');
       navigate('/');
     } else {
       alert('Please enter a valid 6-character farm lobby code.');
@@ -40,7 +43,7 @@ const LoginPage = ({ onLoginSuccess }) => {
             Enter Your Farm Lobby Code
           </h1>
           <p className='my-4 text-xl text-white'>
-            Connect to your co-op farm’s shared task board
+            Connect to your co-op farm&apos;s shared task board
           </p>
         </div>
       </section>
@@ -83,12 +86,16 @@ const LoginPage = ({ onLoginSuccess }) => {
             </button>
           </form>
           <p className='mt-6 text-center text-gray-600 text-sm'>
-            This code ensures you join the correct co-op farm lobby so that your team's tasks remain private and shared only among your group.
+            This code ensures you join the correct co-op farm lobby so that your team&apos;s tasks remain private and shared only among your group.
           </p>
         </div>
       </section>
     </>
   );
+};
+
+LoginPage.propTypes = {
+  onLoginSuccess: PropTypes.func.isRequired,
 };
 
 export default LoginPage;

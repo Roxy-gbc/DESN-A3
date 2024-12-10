@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import TaskListing from './TaskListing';
 import Spinner from './Spinner';
 import tasksData from '../tasks.json'; 
@@ -37,6 +38,10 @@ const TaskListings = ({ isHome = false }) => {
       </div>
     </section>
   );
+};
+
+TaskListings.propTypes = {
+  isHome: PropTypes.bool,
 };
 
 export default TaskListings;

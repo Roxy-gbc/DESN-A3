@@ -1,19 +1,21 @@
-import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
+// src/pages/TaskPage.jsx
+
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 
 const TaskPage = ({ deleteJob }) => {
   const navigate = useNavigate();
-  const { id } = useParams();
   const job = useLoaderData();
 
   const onDeleteClick = (jobId) => {
-    const confirm = window.confirm(
+    const confirmDelete = window.confirm(
       'Are you sure you want to delete this listing?'
     );
 
-    if (!confirm) return;
+    if (!confirmDelete) return;
 
     deleteJob(jobId);
 
@@ -37,12 +39,12 @@ const TaskPage = ({ deleteJob }) => {
 
       <section className='bg-indigo-50'>
         <div className='container m-auto py-10 px-6'>
-          <div className='grid grid-cols-1 md:grid-cols-70/30 w-full gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-7/3 w-full gap-6'>
             <main>
               <div className='bg-white p-6 rounded-lg shadow-md text-center md:text-left'>
                 <div className='text-gray-500 mb-4'>{job.type}</div>
                 <h1 className='text-3xl font-bold mb-4'>{job.title}</h1>
-                <div className='text-gray-500 mb-4 flex align-middle justify-center md:justify-start'>
+                <div className='text-gray-500 mb-4 flex items-center justify-center md:justify-start'>
                   <FaMapMarker className='text-orange-700 mr-1' />
                   <p className='text-orange-700'>{job.location}</p>
                 </div>
@@ -83,7 +85,6 @@ const TaskPage = ({ deleteJob }) => {
                 <h3 className='text-xl'>Contact Phone:</h3>
 
                 <p className='my-2 bg-indigo-100 p-2 font-bold'>
-                  {' '}
                   {job.company.contactPhone}
                 </p>
               </div>
@@ -111,10 +112,8 @@ const TaskPage = ({ deleteJob }) => {
   );
 };
 
-const jobLoader = async ({ params }) => {
-  const res = await fetch(`/api/jobs/${params.id}`);
-  const data = await res.json();
-  return data;
+TaskPage.propTypes = {
+  deleteJob: PropTypes.func.isRequired,
 };
 
-export { TaskPage as default, jobLoader };
+export default TaskPage;

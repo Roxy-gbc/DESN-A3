@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import itemsShippedIcon from '../assets/images/Items_Shipped_Icon.png';
 import itemsCombat_Icon from '../assets/images/Combat_Icon.png';
 import itemsFish_Icon from '../assets/images/Fish_Icon.png';
-import itemsMinerals_Icon from '../assets/images/Minerals_Icon.png';
 import itemsForaging_Icon from '../assets/images/Sturdy_Ring.png';
 import itemsAnimals_Icon from '../assets/images/Animals_Icon.png';
+
 const iconMap = {
   "Farming": itemsShippedIcon,
   "Combat": itemsCombat_Icon,
@@ -67,6 +68,7 @@ const TaskListing = ({ task }) => {
             />
           )}
           <Link
+            to="#" // Add the appropriate path here
             className='h-[36px] bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-lg text-center text-sm'
           >
             Completed!
@@ -75,6 +77,17 @@ const TaskListing = ({ task }) => {
       </div>
     </div>
   );
+};
+
+TaskListing.propTypes = {
+  task: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    reward: PropTypes.string.isRequired,
+    deadline: PropTypes.string.isRequired,
+    postedBy: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default TaskListing;
