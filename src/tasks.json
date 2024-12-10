@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "title": "Harvest Blueberries",
+    "category": "Farming",
+    "description": "The blueberry bushes near the greenhouse are ready to harvest. Collect them before the season changes to ensure we have enough preserves for the Winter!",
+    "deadline": "End of Summer",
+    "reward": "100g",
+    "postedBy": "Mayor Lewis"
+  },
+  {
+    "id": "2",
+    "title": "Slime Hunt",
+    "category": "Combat",
+    "description": "The mine has an infestation of green slimes. We need someone to clear out at least 10 slimes to keep our adventurers safe.",
+    "deadline": "2 days",
+    "reward": "250g",
+    "postedBy": "Adventurer's Guild"
+  },
+  {
+    "id": "3",
+    "title": "Milk the Cows",
+    "category": "Animals",
+    "description": "Our cows are ready to be milked. We need fresh milk for the upcoming festival. Remember to keep them happy and well-fed!",
+    "deadline": "Today",
+    "reward": "50g",
+    "postedBy": "Marnie"
+  },
+  {
+    "id": "4",
+    "title": "Catch a Tuna",
+    "category": "Fishing",
+    "description": "Willy needs a fresh tuna for a special dish he’s preparing. Catch one and bring it to him before the day ends!",
+    "deadline": "Today",
+    "reward": "150g",
+    "postedBy": "Willy"
+  },
+  {
+    "id": "5",
+    "title": "Collect Hardwood",
+    "category": "Foraging",
+    "description": "Robin needs 10 pieces of hardwood to repair some furniture. Search the secret woods or chop down mahogany trees to collect enough.",
+    "deadline": "3 days",
+    "reward": "200g",
+    "postedBy": "Robin"
+  },
+  {
+    "id": "6",
+    "title": "Ship 50 Crops",
+    "category": "Farming",
+    "description": "Pierre is looking for a bulk shipment of fresh crops for his new marketing campaign. Any kind of crops will do!",
+    "deadline": "End of the Week",
+    "reward": "300g",
+    "postedBy": "Pierre"
+  }
+]
