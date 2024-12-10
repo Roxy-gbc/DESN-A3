@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Roxy-gbc.github.io/DESN-A3/",
+  "homepage": "https://roxy-gbc.github.io/DESN-A3/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
