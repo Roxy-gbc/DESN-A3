@@ -18,7 +18,7 @@ const Spinner = ({ loading }) => {
 };
 
 Spinner.propTypes = {
-  loading: PropTypes.bool.isRequired, // Ensures loading is a boolean and is provided
+  loading: PropTypes.bool, // Ensures loading is a boolean and is provided
 };
 
 Spinner.defaultProps = {

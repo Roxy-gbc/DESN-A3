@@ -1,10 +1,9 @@
 // src/App.js
 import { useState } from 'react';
 import {
+  HashRouter,
+  Routes,
   Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
   Navigate,
 } from 'react-router-dom';
 
@@ -17,25 +16,20 @@ import AddTaskPage from './pages/AddTaskPage';
 import LoginPage from './pages/LoginPage';
 
 const App = () => {
-  // The "correctCode" variable stores the code. In a real app, this could come from an env variable.
   const correctCode = 'ABCDEF';
-
-  // Local state to track if user is authenticated
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const onLoginSuccess = () => {
     setIsAuthenticated(true);
   };
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <>
+  return (
+    <HashRouter>
+      <Routes>
         <Route
           path="/login"
           element={<LoginPage correctCode={correctCode} onLoginSuccess={onLoginSuccess} />}
         />
-        
-        {/* Protect these routes: if not authenticated, redirect to /login */}
         <Route
           path="/"
           element={
@@ -48,11 +42,9 @@ const App = () => {
           <Route path="jobs/:id" element={<TaskPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
-      </>
-    )
+      </Routes>
+    </HashRouter>
   );
-
-  return <RouterProvider router={router} />;
 };
 
 export default App;

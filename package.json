@@ -12,7 +12,7 @@
     "server": "json-server --watch src/jobs.json --port 8000",
     "test": "vitest --coverage",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",

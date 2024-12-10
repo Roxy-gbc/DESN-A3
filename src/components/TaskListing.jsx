@@ -81,13 +81,13 @@ const TaskListing = ({ task }) => {
 
 TaskListing.propTypes = {
   task: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    reward: PropTypes.string.isRequired,
-    deadline: PropTypes.string.isRequired,
-    postedBy: PropTypes.string.isRequired,
-  }).isRequired,
+    category: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    reward: PropTypes.string,
+    deadline: PropTypes.string,
+    postedBy: PropTypes.string,
+  }),
 };
 
 export default TaskListing;

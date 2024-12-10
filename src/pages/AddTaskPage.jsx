@@ -188,7 +188,7 @@ const AddTaskPage = ({ addTaskSubmit }) => {
 };
 
 AddTaskPage.propTypes = {
-  addTaskSubmit: PropTypes.func.isRequired,
+  addTaskSubmit: PropTypes.func,
 };
 
 export default AddTaskPage;

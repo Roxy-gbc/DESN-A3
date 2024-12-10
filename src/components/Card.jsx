@@ -5,7 +5,7 @@ const Card = ({ children, bg = 'bg-gray-100' }) => {
 };
 
 Card.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   bg: PropTypes.string,
 };
 

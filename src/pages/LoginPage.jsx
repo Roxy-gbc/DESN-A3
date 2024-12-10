@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import bannerImage from '../assets/images/banner.png';
-
+import woodImage from '../assets/images/wood.png';
 const LoginPage = ({ onLoginSuccess }) => {
   const [enteredCode, setEnteredCode] = useState('');
   const navigate = useNavigate();
@@ -71,7 +71,7 @@ const LoginPage = ({ onLoginSuccess }) => {
               type="submit"
               className="text-white font-medium py-3 px-6 text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
               style={{
-                backgroundImage: `url('/src/assets/images/wood.png')`,
+                backgroundImage: `url(${woodImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -95,7 +95,7 @@ const LoginPage = ({ onLoginSuccess }) => {
 };
 
 LoginPage.propTypes = {
-  onLoginSuccess: PropTypes.func.isRequired,
+  onLoginSuccess: PropTypes.func,
 };
 
 export default LoginPage;

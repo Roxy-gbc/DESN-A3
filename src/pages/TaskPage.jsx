@@ -113,7 +113,7 @@ const TaskPage = ({ deleteJob }) => {
 };
 
 TaskPage.propTypes = {
-  deleteJob: PropTypes.func.isRequired,
+  deleteJob: PropTypes.func,
 };
 
 export default TaskPage;
